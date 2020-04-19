@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build Docker Image
-      run: docker build -t test-docker-action . 
+      run: docker build -t test-docker-action -f ./docker/Dockerfile . 
 
     - name: Do test
       run: docker run test-docker-action
