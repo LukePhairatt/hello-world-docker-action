@@ -10,8 +10,7 @@ jobs:
       uses: docker build -t test-docker-action . 
 
     - name: Do test
-      run: |
-	docker run test-docker-action
+      run: docker run test-docker-action
 
 
 
