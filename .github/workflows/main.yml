@@ -10,7 +10,8 @@ jobs:
       run: docker build -t test-docker-action -f ./docker/Dockerfile . 
 
     - name: Do test
-      run: docker run test-docker-action
+      run: |
+        docker run test-docker-action
 
 
 
