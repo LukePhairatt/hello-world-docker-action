@@ -11,7 +11,9 @@ jobs:
 
     - name: Do test
       run: |
-        docker run test-docker-action
+        docker run -v `pwd`/src:/test \
+		   test-docker-action \
+		   /test/do-test.sh
 
 
 
